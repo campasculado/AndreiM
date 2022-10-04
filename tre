@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Graded Assessment</title>
+	</head>
+	<body>
+		<h1>My Favorite Shows<hr></hr></h1>
+	</body>
+	<body>
+		<div>
+			<a href="files/page 1.html"><img src="images/picture-1.jpg" height=150px width=100px></a>
+			<a href="files/page 2.html"><img src="images/picture-2.jpg" height=150px width=100px></a>
+			<a href="files/page 3.html"><img src="images/picture-3.jpg" height=150px width=100px></a>
+			<p> Click on the images to know more about each show!</p>
+		</div>
+	</body>
+</html>
