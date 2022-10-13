@@ -1,0 +1,38 @@
+body {
+	background-image: url("globe.jpeg");
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+h1 {
+	background-color: #FFFF00;
+	border: 2px dotted blue;
+	width: 250px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+p {
+	background-color: hsl(295, 70%, 67%);
+	text-align: justify;
+	text-justify: inter-word;
+	border: 3px solid black;
+	padding: 20px;
+	width: 500px;
+	font-style: italic;
+}
+span {
+	color: rgb(225, 0, 0);
+	font-weight: bold;
+	font-style: italic;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+	
+
+	
