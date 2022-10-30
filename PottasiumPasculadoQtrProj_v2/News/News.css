@@ -1,0 +1,45 @@
+body {
+font-family:"sans-serif";
+margin: 0;
+
+}
+html {
+box-sizing: border-box;
+}
+
+.column {
+float: left;
+width: 48%;
+margin-bottom: 16px;
+padding: 0 8px;
+ 
+}
+.column p, h2, h4, li, img {
+	padding: 20px;
+}
+img {
+	float: left;
+}
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+margin: 8px;
+background-image: linear-gradient(to right, #A7C7E7, #D8D8D8);
+}
+
+
+.container {
+padding: 2px;
+}
+.container::after, .row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+@media screen and (max-width: 650px) {
+.column {
+width: 100%;
+display: block;
+}
+}
