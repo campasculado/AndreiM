@@ -1,0 +1,26 @@
+<DOCTYPE HTML>
+ <html>
+     <head>
+         <style>
+             IMG {
+                 height: 500px;
+                 width: 450px;
+             }
+         </style>
+     </head>
+     <body>
+    <button type = "button" onclick ="first()">Close</button>
+     <button type = "button" onclick ="second()">Open</button>
+     <br>
+     <img id="close" src ="Close.jpg">
+     <script>
+         function first () {
+            document.getElementById('close').src = "Close.jpg";
+         }
+         function second () {
+            document.getElementById('close').src = "Open.jpg";
+         }
+     </script>
+     
+     </body>
+ </html>
