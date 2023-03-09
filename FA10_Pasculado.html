@@ -11,9 +11,9 @@
    document.write("<br>");
   
    let hundreds = Math.floor(randomNumber / 100) * 100; 
-   let tens = Math.floor(randomNumber % 10) * 10;
+   let tens = Math.floor(randomNumber / 10) % 10;
    let ones = randomNumber % 10;
-    document.write("Breakdown: " + hundreds + "," + tens + "," + ones);
+    document.write("Breakdown: " + hundreds + "," + tens + "0," + ones);
    
   
    
