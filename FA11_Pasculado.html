@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Check(a, b, c) {
+                if (a == b && b == c) {
+                
+				alert("The triangle is EQUILATERAL.");
+                } else if (a == b || b == c || a == c) {
+                
+				alert("The triangle is ISOSCELES.");
+                 } else {
+               
+			   alert("The triangle is SCALENE.");
+                }
+            }
+
+            function Triangle() {            
+                let a = prompt("Input Side A");
+                let b = prompt("Input Side B");
+                let c = prompt("Input Side C");
+
+                Check(a, b, c);
+            }
+
+            Triangle();
+
+        </script>
+    </body>
+</html>
