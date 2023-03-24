@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Deprecation Calculator</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Car Depreciation Calculator </h1>
+	<h2> Your Car Model: <span id="model"> </span></h2>
+    <h2> Car Cost: <span id="cost"> </span></h2>
+    <h2> Age of your Car: <span id="age"> </span></h2>
+    <h2> Good Condition?: <span id="condition"> </span></h2>
+    <h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+    
+    <button onclick="enterCar()"> Enter your Car information </button>
+    <script>
+	
+	
+	var cmv = 0;
+    	function enterCar() {
+		
+        	carmodel = prompt("Enter Car Model");
+            carcost = prompt("Enter Cost of the Car");
+            carage = prompt("How old is your car?");
+            good = confirm("In Good Condition? Ok for Yes / Cancel for No");
+            model.innerHTML = carmodel;
+            cost.innerHTML = carcost;
+            age.innerHTML = carage;
+            condition.innerHTML = (good) ? "Yes" : "No";      
+            computeMarketValue(parseFloat(carcost),parseFloat(carage),good); // create this function 
+        }
+		function computeMarketValue(cost, age, condition) {
+  
+ 
+  if (age > 10) {
+    cmv = 70000;
+  } else if (age >= 8) {
+    cmv = 100000;
+  } else if (age >= 5) {
+    cmv = cost * 0.75;
+  } else {
+    cmv = cost * 0.5;
+  }
+  whatcondition();
+  
+  function whatcondition(){
+  
+  if(condition == true){
+    document.getElementById("currentvalue").innerHTML = parseFloat(cmv.toFixed(2));
+}else{
+	cmv = cmv - cmv*0.1;
+    document.getElementById("currentvalue").innerHTML = parseFloat(cmv.toFixed(2));
+
+}
+  
+  }
+  
+  
+}
+
+    </script>
+    
+</body>
+</html>
+
