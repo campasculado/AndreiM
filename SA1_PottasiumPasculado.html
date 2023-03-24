@@ -1,0 +1,23 @@
+<DOCTYPE html>
+ <html>
+  <head>
+   <title>Toss Coin</title>
+   </head>
+  <body>
+  <h2 id = "coin" onclick = "tossCoin()">H</h2>
+  <script>
+   function tossCoin() {
+   let randomNumber = Math.random();
+   let currentFace = document.getElementById("coin").innerHTML;
+   let newFace = (randomNumber < 0.5)? "H" : "T";
+   if (newFace === currentFace) {
+       alert("You are Correct");
+	} else {
+	   alert("You are Incorrect");
+	   }
+	   document.getElementById("coin").innerHTML = newFace;
+	   }
+   </script> 
+  </body>
+  </html>
+  
