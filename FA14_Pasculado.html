@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input {
+      margin-bottom: 10px;
+    }
+    
+    .red-border {
+      border: 1px solid red;
+    }
+    
+    .green-background {
+      background: green;
+    }
+
+  * {
+
+box-sizing: border-box;
+font-family: "sans-serif";
+}
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;
+  border: 1px solid #666666; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px;
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+input[type=email], select, textarea {
+width: 100%; 
+  padding: 12px;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px;
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+
+
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+input[type=reset] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.container {
+  border-radius: 5px;
+  background-color: #F0FFFF;
+  padding: 20px;
+}
+  </style>
+  <script>
+    function addRedBorder(inputElement) {
+      inputElement.classList.remove('green-background');
+      inputElement.classList.add('red-border');
+    }
+    
+    function addGreenBackground(inputElement) {
+      inputElement.classList.remove('red-border');
+      inputElement.classList.add('green-background');
+    }
+    
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const username = document.getElementById('username').value;
+      const gender = document.getElementById('gender').value;
+      const password = document.getElementById('password').value;
+      const email = document.getElementById('email').value;
+      const address = document.getElementById('address').value;
+      const interest = document.getElementById('interest').value;
+      
+      const output = document.getElementById('output');
+      output.innerHTML = `
+        <p>Name: ${name}</p>
+        <p>Username: ${username}</p>
+        <p>Gender: ${gender}</p>
+        <p>Password: ${password}</p>
+        <p>Email: ${email}</p>
+        <p>Address: ${address}</p>
+        <p>Interest: ${interest}</p>
+      `;
+    }
+    
+    function resetForm() {
+      const inputs = document.getElementsByTagName('input');
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
+        inputs[i].classList.remove('red-border', 'green-background');
+      }
+      
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+    }
+  </script>
+</head>
+<body>
+  <h1>Learning Website Sign-Up</h1>
+  <form>
+    <fieldset>
+      <legend>User Information</legend>
+      <label for="name">Name:</label>
+      <input  id="name" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)">
+      
+      <label for="username">Username:</label>
+      <input  id="username" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)">
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="prefer-not-to-mention">Prefer Not to Mention</option>
+      </select>
+      
+      <label for="password">Password:</label>
+      <input  id="password" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)">
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)">
+      
+      <label for="address">Address:</label>
+      <textarea type ="text" id="address" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)"></textarea>
+      
+      <label for="interest">Interest:</label>
+      <textarea type = "text" id="interest" required onblur="addRedBorder(this)" onfocus="addGreenBackground(this)"></textarea>
+   </fieldset>
+
+<button type="submit" onclick="submitForm()">Submit</button>
+<button type="reset" onclick="resetForm()">Reset</button>
+</form>
+  <div id="output"></div>
+</body>
+</html>
